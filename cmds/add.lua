@@ -1,8 +1,8 @@
 local add = {}
 
 add.args = {
-    {1, "number", true},
-    {2, "number", true, "num2"} -- num2 is the alias
+    {1, "number", true, "num1"},
+    {2, "number", true, "num2"}
 }
 add.usage = "add num1 num2"
 
