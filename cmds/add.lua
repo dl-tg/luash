@@ -1,8 +1,8 @@
 local add = {}
 
 add.args = {
-    {1, "number", true, "num1"},
-    {2, "number", true, "num2"}
+    {1, "number", true, nil, "num1"},
+    {2, "number", true, nil, "num2"}
 }
 add.usage = "add num1 num2"
 
