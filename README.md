@@ -116,4 +116,4 @@ If you want to contribute but are unsure how, refer to the official GitHub guide
 
 ## License
 
-Luash is open-source software licensed under the [MIT License](LICENSE].
+Luash is open-source software licensed under the [MIT License](LICENSE).
