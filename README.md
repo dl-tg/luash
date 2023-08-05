@@ -16,20 +16,20 @@ Luash is a simple interactive shell written in Lua that allows you to execute cu
 
 ## Usage
 
-1. Clone or download the repository to your local machine.
-2. Make sure you have Lua and the LuaFileSystem library installed.
+1. Clone or download the repository to your local machine
+2. Make sure you have Lua and the LuaFileSystem library installed
    - Download Lua here https://www.lua.org/download.html
    - To install LuaFileSystem, install luarocks and run
      ```shell
      luarocks install luafilesystem
      ```
     
-3. Navigate to the Luash directory.
-4. Run the luash.lua script using the Lua interpreter:
+3. Navigate to the Luash directory
+4. Run the core.lua script using the Lua interpreter:
 
 ```bash
 
-lua luash.lua
+lua core.lua
 ```
 You will be presented with the Luash prompt (>) where you can enter commands.
 
