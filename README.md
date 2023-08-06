@@ -13,15 +13,19 @@ Luash is a simple interactive shell written in Lua that allows you to execute cu
 
   - Lua (5.1 or above)
   - LuaFileSystem (lfs) library
+  - Luasocket library
+  - Luasec library
 
 ## Usage
 
 1. Clone or download the repository to your local machine
-2. Make sure you have Lua and the LuaFileSystem library installed
+2. Make sure you have Lua and the LuaFileSystem, Luasec and Luasocket library installed
    - Download Lua here https://www.lua.org/download.html
-   - To install LuaFileSystem, install luarocks and run
+   - To install the libraries, install luarocks and run
      ```shell
      luarocks install luafilesystem
+     luarocks install luasocket
+     luarocks install luasec
      ```
     
 3. Navigate to the Luash directory
