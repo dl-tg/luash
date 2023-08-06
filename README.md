@@ -69,10 +69,9 @@ echo.args = {
 }
 echo.usage = "echo msg num"
 
-function echo.Handler(...)
-    local args = {...}
-    print(args[1])
-    print(args[2])
+function echo.Handler(msg, num)
+    print(msg)
+    print(num)
 end
 
 return echo
