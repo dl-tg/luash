@@ -9,12 +9,12 @@ rm.args = {
 rm.usage = "rm fileordir"
 
 function rm.Handler(fileordir)
-    local fileAttrs = lfs.attributes(fileordir)
+    local fileType = lfs.attributes(fileordir, "mode")
 
     -- Check if it exists
-    if fileAttrs then
+    if fileType then
         -- Check if it's a directory
-        if fileAttrs.mode == "directory" then
+        if fileType.mode == "directory" then
             lfs.rmdir(fileordir)
         else
             os.remove(fileordir)
