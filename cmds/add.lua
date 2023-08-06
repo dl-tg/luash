@@ -6,11 +6,7 @@ add.args = {
 }
 add.usage = "add num1 num2"
 
-function add.Handler(...)
-    local args = {...}
-    local num1 = args[1]
-    local num2 = args[2]
-
+function add.Handler(num1, num2)
     print(num1 + num2)
 end
 

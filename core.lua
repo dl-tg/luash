@@ -28,6 +28,15 @@ local function getCmds()
     end
 end
 
+local function getUsername()
+    local username
+    local handle = io.popen("whoami")
+    if handle ~= nil then
+        username = handle:read("*a"):gsub("\n", "")
+        handle:close()
+    end
+    return username
+end
 
 -- Function to handle usage errors
 local function UsageError(error, usage)
@@ -108,14 +117,21 @@ print("Luash v0.1")
 
 -- Main loop to read and process user input
 while true do
-    io.write("> ")
+    io.write("[" .. getUsername() .. "@ " .. (lfs.currentdir():match("([^/\\]+)$") or "/") .. "] > ")
     local input = io.read()
     local cmd, argStr = input:match("(%S+)%s*(.*)")
 
+    -- Handle empty command
+    if input == "" then
+        goto continue
+    end
+
+    -- Exit command
     if cmd == "exit" then
         break
     end
 
+    -- Reload command
     if cmd == "reload" then
         print("Reloading the commands...")
         getCmds()
@@ -182,4 +198,5 @@ while true do
             print(cmd .. ": Command not found")
         end
     end
+    ::continue::
 end

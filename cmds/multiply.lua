@@ -7,11 +7,7 @@ multiply.args = {
 
 multiply.usage = "multiply num1 num2"
 
-function multiply.Handler(...)
-    local args = {...}
-    local num1 = args[1]
-    local num2 = args[2]
-
+function multiply.Handler(num1, num2)
     print(num1 * num2)
 end
 
